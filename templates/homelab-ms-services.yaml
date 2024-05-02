@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: homelab-ms-service
+  labels:
+    app: homelab-ms
+spec:
+  selector:
+    app: homelab-ms
+  ports:
+    - protocol: TCP
+      port: 9000
+      targetPort: 3000
+  type: ClusterIP

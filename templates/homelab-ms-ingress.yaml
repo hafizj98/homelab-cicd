@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: homelab-ms-ingress
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /homelab-ms
+            pathType: Prefix
+            backend:
+              service:
+                name: homelab-ms-service  # Name of your hello service
+                port:
+                  number: 9000  # The port hello-ms is listening on

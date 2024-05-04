@@ -7,7 +7,7 @@ spec:
   rules:
     - http:
         paths:
-          - path: /homelab-ms
+          - path: /homelab
             pathType: Prefix
             backend:
               service:
